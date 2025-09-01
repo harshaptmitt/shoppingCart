@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Serif", serif;
+        }
+
+        .navContainer {
+            height: 70px;
+            width: 100%;
+            background: linear-gradient(to right, #24c6dc, #514a9d);
+            display: flex;
+            align-items: center;
+        }
+
+        .navContainer .logoBlock {
+            height: 70px;
+            flex-basis: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logoBlock img {
+            height: 60px;
+            width: 100px;
+            border-radius: 10px;
+        }
+
+        .navContainer .menuBlock {
+            height: 70px;
+            flex-basis: 70%;
+        }
+
+        .menuBlock ul {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        ul li a:hover {
+            border-bottom: 1px solid aliceblue;
+        }
+
+        .navContainer .cartBlock {
+            height: 70px;
+            flex-basis: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cartBlock i {
+            font-size: 50px;
+            color: white;
+        }
+
+        footer {
+            height: 50px;
+            width: 100%;
+            background: linear-gradient(to right, #24c6dc, #514a9d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        footer h3 {
+            color: aliceblue;
+        }
+
+
+        .mainSection {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .mainSection .AllProducts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .AllProducts article {
+            background: linear-gradient(to right, #24c6dc, #514a9d);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .AllProducts article h1 {
+            color: #fff;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        .product {
+
+            height: 480px;
+            display: inline-block;
+            width: 290px;
+            text-align: center;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            background-color: #ffff;
+
+        }
+
+        .product img {
+            max-width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 25px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #fff;
+            border: 2px solid #333;
+            color: #333;
+        }
+        #cartCount{
+            font-size: 23px;
+            color: red;
+            position: absolute;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav bar section -->
+    <nav class="navContainer">
+        <aside class="logoBlock">
+            <img src="https://t3.ftcdn.net/jpg/02/98/18/60/360_F_298186090_Rimyxol4jsYvYbQg1i6sttQ5N3oebXgt.jpg"
+                alt="logoBlock">
+        </aside>
+        <aside class="menuBlock">
+            <ul>
+                <li><a href="#">Mens</a></li>
+                <li><a href="#">Womens</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </aside>
+        <aside class="cartBlock">
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping" id="cartIcons"></i></a>
+            <span id="cartCount">0</span>
+        </aside>
+    </nav>
+
+    <!-- Main Container -->
+
+    <main class="mainSection">
+        <aside class="AllProducts">
+            <article class="mensCollection">
+                <h1>Mens Collection</h1>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's Men's Solid Slim Fit Shirt</h3>
+                    <p>₹ 2399</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/51UWpA9iEuL._SY679_.jpg" alt="">
+                    <h3>Men's Casual Cotton Plain Button Shirt</h3>
+                    <p>₹ 1999</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/31qtYG7vCHL.jpg" alt="">
+                    <h3>Half Zipper Solid Sweatshirt for Men</h3>
+                    <p>₹ 1699</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71kemLuRphL._SX569_.jpg" alt="">
+                    <h3>Men's Checkered Shirt-Regular Fit</h3>
+                    <p>₹ 1599</p>
+                    <button>Add to cart</button>
+                </div>
+
+            </article>
+            <article class="womensCollection">
+                <h1>Womens Collection</h1>
+                <div class="product">
+                    <img src="https://www.jaipuriadaah.com/cdn/shop/files/DSC_4076copy_600x.jpg?v=1719492417" alt="">
+                    <h3>Blue and White Magic Tiered Midi </h3>
+                    <p>₹ 2199</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://www.jaipuriadaah.com/cdn/shop/files/WhatsApp_Image_2025-03-22_at_2.24.45_PM_600x.jpg?v=1742652826"
+                        alt="">
+                    <h3>Bohemian Blue Printed Maxi</h3>
+                    <p>₹ 1699</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://www.jaipuriadaah.com/cdn/shop/files/4D3A9408.jpg?v=1747041408&width=720" alt="">
+                    <h3>Royal Bloom Blue Cotton Suit Set</h3>
+                    <p>₹ 1499</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://www.jaipuriadaah.com/cdn/shop/products/WhatsAppImage2022-07-17at9.51.39AM_600x.jpg?v=1689311119"
+                        alt="">
+                    <h3>Royal Blue Handblock Suit Set</h3>
+                    <p>₹ 1199</p>
+                    <button>Add to cart</button>
+                </div>
+            </article>
+            <article class="kidsCollection">
+                <h1>Kids Collection</h1>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's kid t-shirt Men</h3>
+                    <p>₹ 299</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's Men's Solid Slim Fit Shirt</h3>
+                    <p>₹ 2399</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's Men's Solid Slim Fit Shirt</h3>
+                    <p>₹ 2399</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's Men's Solid Slim Fit Shirt</h3>
+                    <p>₹ 2399</p>
+                    <button>Add to cart</button>
+                </div>
+            </article>
+            <article class="accessoriesCollection">
+                <h1>Accessories Collection</h1>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's Men's Solid Slim Fit Shirt</h3>
+                    <p>₹ 2399</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's Men's Solid Slim Fit Shirt</h3>
+                    <p>₹ 2399</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's Men's Solid Slim Fit Shirt</h3>
+                    <p>₹ 2399</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQYAAQ16XI3VJp13fHvtdvBy1P2eCsER8G0w78dLaiAiyAsBxL-nX4jdX0zfx_K_BOaWOctaQ-FhugUvnW39WyUyuHMCL3VsRaora2J6jgN4HT7tSlWZ_jg"
+                        alt="">
+                    <h3>Levi's Men's Solid Slim Fit Shirt</h3>
+                    <p>₹ 2399</p>
+                    <button>Add to cart</button>
+                </div>
+            </article>
+        </aside>
+    </main>
+    <footer>
+        <h3>@copy rights 2025</h3>
+    </footer>
+</body>
+<script src="./homepage.js"></script>
+</html>
